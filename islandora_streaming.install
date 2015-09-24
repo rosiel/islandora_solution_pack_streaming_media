@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * islandora_streaming.install
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * @see islandora_streaming_islandora_required_objects()
+ */
+function islandora_streaming_install() {
+  module_load_include('inc', 'islandora', 'includes/solution_packs');
+  islandora_install_solution_pack('islandora_streaming');
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function islandora_streaming_uninstall() {
+  module_load_include('inc', 'islandora', 'includes/solution_packs');
+  $variables = array(
+    'islandora_video_viewers',
+    'islandora_video_ffmpeg_path',
+    'islandora_video_retain_original',
+    'islandora_video_make_archive',
+    'islandora_video_make_mp4_locally',
+    'islandora_video_make_ogg_locally',
+    'islandora_video_ffmpeg2theora_path',
+    'islandora_video_mp4_audio_codec',
+    'islandora_video_play_obj',
+    'islandora_video_max_obj_size',
+  );
+  array_map('variable_del', $variables);
+  islandora_install_solution_pack('islandora_streaming', 'uninstall');
+// Delete variables if we make any.
+
+}

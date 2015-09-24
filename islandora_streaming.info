@@ -1,0 +1,6 @@
+name = Islandora Streaming Media
+description = Create Islandora wrappers that stream content in a video player.
+dependencies[] = islandora
+dependencies[] = videojs
+package = Islandora Skunkworks
+core = 7.x
