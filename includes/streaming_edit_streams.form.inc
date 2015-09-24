@@ -18,6 +18,7 @@
  */
 function islandora_streaming_edit_streams_form(array $form, array &$form_state, $islandora_object = NULL) {
   module_load_include('inc', 'islandora_streaming', 'includes/utilities');
+  $first_load = FALSE;
   if ($islandora_object) {
     $editing = TRUE;
     if (!isset($form_state['islandora']['objects'])) {

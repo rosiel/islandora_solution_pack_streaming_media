@@ -20,7 +20,7 @@ function islandora_streaming_admin(array $form, array &$form_state) {
   module_load_include('inc', 'islandora', 'includes/solution_packs');
   $form = array();
   // Get viewer table.
-  $viewer_table = islandora_viewers_form('islandora_streaming_viewers', 'rtmp/mp4');
+  $viewer_table = islandora_viewers_form('islandora_streaming_viewers', 'video/mp4');
   $form += $viewer_table;
 
   // Viewer stuff.
