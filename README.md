@@ -29,18 +29,10 @@ There is also an option to provide a thumbnail during the ingest process.
 
 When creating an object, you may specify multiple types of streams for the same resource.
 
-## Troubleshooting/Issues
-
-Having problems or solved a problem? Check out the Islandora google groups for a solution.
-
-* [Islandora Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora)
-* [Islandora Dev Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora-dev)
-
 ## Maintainers/Sponsors
 Current maintainers:
 
 * [Rosie Le Faive](https://github.com/rosiel)
-
 
 ## License
 
