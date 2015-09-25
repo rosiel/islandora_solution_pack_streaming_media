@@ -11,7 +11,7 @@ This module requires the following modules/libraries:
 * [Islandora](https://github.com/islandora/islandora)
 * [Tuque](https://github.com/islandora/tuque)
 
-*To successfully play streaming media, a compatible viewer must be enabled. Currently, Islandora VideoJS is the only known compatible viewer.*
+*To successfully play streaming media, a compatible viewer must be enabled. Currently, Islandora VideoJS is the only known compatible viewer. RTMP streaming does not work with all versions of the videojs library. This module has been tested with 4.12.5 and 4.12.11.*
 
 ## Installation
 
