@@ -31,7 +31,7 @@ function islandora_streaming_menu() {
         ISLANDORA_ADD_DS,
       ), 2),
       'file' => 'includes/streaming_edit_streams.form.inc',
-      'type' => MENU_LOCAL_ACTION,
+      'type' => MENU_CALLBACK,
     ),
   );
 }
