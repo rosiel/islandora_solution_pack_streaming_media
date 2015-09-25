@@ -54,9 +54,5 @@ function islandora_streaming_preprocess_islandora_streaming(array &$variables) {
 
   // Get Viewer
   $viewer = islandora_get_viewer($video_params, 'islandora_streaming_viewers', $object);
-  if ($viewer) {
-    videojs_add();
-  }
   $variables['islandora_content'] = $viewer;
-
   }
