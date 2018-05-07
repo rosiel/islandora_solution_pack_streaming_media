@@ -57,23 +57,27 @@ function islandora_streaming_edit_streams_form(array $form, array &$form_state, 
       '#default_value' => isset($defaults[$i-1]['url']) ? $defaults[$i-1]['url'] : '',
       //'#required' => TRUE,
     );
+    $options = array(
+      '#theme' => 'item_list',
+      '#items' => array(
+        "video/mp4",
+        "application/x-mpegURL - .m3u8 files",
+        "video/MP2T - .ts files",
+        "video/ogg - OGG format",
+        "video/webm - WebM format",
+        "rtmp/mp4 - rtmp streaming protocol",
+        "audio/wave",
+        "audio/wav",
+        "audio/x-wav",
+        "audio/x-pn-wav",
+        "audio/webm",
+        "audio/ogg",
+        "application/ogg",
+      )
+    );
     $form['source'][$i]['mime'] = array(
       '#type' => 'textfield',
-      '#description' => t("Enter the mimetype of the stream. Suggested options:
-        video/mp4,
-        application/x-mpegURL - .m3u8 files,
-        video/MP2T - .ts files,
-        video/ogg - OGG format,
-        video/webm - WebM forma,
-        rtmp/mp4 - rtmp streaming protocol,
-        audio/wave,
-        audio/wav,
-        audio/x-wav,
-        audio/x-pn-wav,
-        audio/webm,
-        audio/ogg,
-        application/ogg"
-        ),
+      '#description' => t("Enter the mimetype of the stream. Suggested options:") . render($options),
       '#title' => t('Mimetype'),
       '#size' => 20,
       '#maxlength' => 40,
